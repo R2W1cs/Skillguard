@@ -1,0 +1,11 @@
+# Example SkillGuard config (YAML also supported via --config)
+# Save as skillguard.yaml:
+
+# max_file_size_bytes: 1048576
+# max_files_per_skill: 500
+# exclude_globs:
+#   - "**/node_modules/**"
+#   - "**/.git/**"
+# rules_disabled: []
+# enable_sandbox: false
+# include_quality: true

@@ -1,0 +1,67 @@
+{
+  "dataset": "legacy-v0.1",
+  "dataset_version": "0.1.0",
+  "case_count": 7,
+  "true_positives": 9,
+  "false_positives": 0,
+  "true_negatives": 2,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "false_positive_rate": 0.0,
+  "false_negative_rate": 0.0,
+  "by_category": {
+    "OBF": {
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "INST": {
+      "tp": 3,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "SECRET": {
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "NET": {
+      "tp": 1,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "SHELL": {
+      "tp": 2,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    }
+  },
+  "by_severity": {},
+  "duration_seconds": 0.0206,
+  "details": [
+    "TP obfuscated: SG-OBF-001",
+    "TP prompt-inject: SG-INST-003",
+    "TP prompt-inject: SG-INST-001",
+    "TP secret-exfil: SG-INST-002",
+    "TP secret-exfil: SG-SECRET-001",
+    "TP secret-exfil: SG-NET-002",
+    "TP shell-danger: SG-SHELL-003",
+    "TP shell-danger: SG-SHELL-001",
+    "TN hello-world",
+    "TN fp-docs",
+    "TP mixed mixed-skill"
+  ],
+  "limitations": [
+    "Corpus is synthetic and inert; it does not represent the full attack space.",
+    "Perfect precision/recall on a labeled corpus is not proof of security.",
+    "Real-world evaluation is reported separately from synthetic metrics.",
+    "Cases marked static_detectable=false are excluded from FN scoring."
+  ]
+}

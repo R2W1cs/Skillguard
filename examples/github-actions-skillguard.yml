@@ -1,0 +1,75 @@
+# Example GitHub Actions workflow — SkillGuard CI
+# Copy to .github/workflows/skillguard.yml and adjust paths.
+
+name: SkillGuard
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install SkillGuard
+        run: pip install skillguard
+
+      # Optional: from this repo source
+      # run: pip install -e ".[dev]"
+
+      - name: Scan skills
+        run: |
+          skillguard scan skills \
+            --format json \
+            --output skillguard-report.json \
+            --fail-on high \
+            --quiet
+
+      - name: Upload SARIF
+        if: always()
+        run: |
+          skillguard scan skills --format sarif --output skillguard.sarif --quiet || true
+
+      - name: Upload scan artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skillguard-report
+          path: |
+            skillguard-report.json
+            skillguard.sarif
+
+      - name: Upload SARIF to code scanning
+        if: always()
+        continue-on-error: true
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: skillguard.sarif
+
+  regression:
+    runs-on: ubuntu-latest
+    # Requires a baseline report checked into the repo (optional)
+    if: hashFiles('ci/skillguard-baseline-report.json') != ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install skillguard
+      - name: Fresh scan
+        run: |
+          skillguard scan skills --format json --output /tmp/new-report.json --quiet || true
+      - name: Compare against baseline report
+        run: |
+          skillguard compare ci/skillguard-baseline-report.json /tmp/new-report.json \
+            --fail-on-introduced high \
+            --output /tmp/compare.json
+          cat /tmp/compare.json

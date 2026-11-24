@@ -1,0 +1,1340 @@
+{
+  "version": "2.0.0",
+  "generated_by": "scripts/generate_adversarial_corpus.py",
+  "case_count": 105,
+  "cases": [
+    {
+      "id": "benign-doc-01",
+      "label": "benign",
+      "path": "benign/benign-doc-01",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-02",
+      "label": "benign",
+      "path": "benign/benign-doc-02",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-03",
+      "label": "benign",
+      "path": "benign/benign-doc-03",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-04",
+      "label": "benign",
+      "path": "benign/benign-doc-04",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-05",
+      "label": "benign",
+      "path": "benign/benign-doc-05",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-06",
+      "label": "benign",
+      "path": "benign/benign-doc-06",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-07",
+      "label": "benign",
+      "path": "benign/benign-doc-07",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-08",
+      "label": "benign",
+      "path": "benign/benign-doc-08",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-09",
+      "label": "benign",
+      "path": "benign/benign-doc-09",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "benign-doc-10",
+      "label": "benign",
+      "path": "benign/benign-doc-10",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Legitimate documentation; should not trigger forbidden critical rules.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "prompt-inject-01",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-01",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-02",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-02",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-03",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-03",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-04",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-04",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-05",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-05",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-06",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-06",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-07",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-07",
+      "expected_rules": [
+        "SG-INST-001",
+        "SG-INST-004"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-08",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-08",
+      "expected_rules": [
+        "SG-INST-001",
+        "SG-INST-003"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-09",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-09",
+      "expected_rules": [
+        "SG-INST-004"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-10",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-10",
+      "expected_rules": [
+        "SG-INST-004"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-11",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-11",
+      "expected_rules": [
+        "SG-INST-004"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "prompt-inject-12",
+      "label": "malicious",
+      "path": "malicious/prompt-inject-12",
+      "expected_rules": [
+        "SG-INST-003",
+        "SG-INST-004"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Direct instruction hierarchy manipulation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-01",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-01",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-02",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-02",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": false,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-03",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-03",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-04",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-04",
+      "expected_rules": [
+        "SG-INST-001",
+        "SG-OBF-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-05",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-05",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": false,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-06",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-06",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": false,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-07",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-07",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": false,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "indirect-inject-08",
+      "label": "malicious",
+      "path": "malicious/indirect-inject-08",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Indirect / deferred instruction attack; static detection partial.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-01",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-01",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-02",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-02",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-03",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-03",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-04",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-04",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-05",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-05",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-06",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-06",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-07",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-07",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-08",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-08",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-09",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-09",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "secret-harvest-10",
+      "label": "malicious",
+      "path": "malicious/secret-harvest-10",
+      "expected_rules": [
+        "SG-INST-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Instruction-level secret extraction.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-01",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-01",
+      "expected_rules": [
+        "SG-SHELL-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-02",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-02",
+      "expected_rules": [
+        "SG-SHELL-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-03",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-03",
+      "expected_rules": [
+        "SG-SHELL-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-04",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-04",
+      "expected_rules": [
+        "SG-SHELL-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-05",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-05",
+      "expected_rules": [
+        "SG-SHELL-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-06",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-06",
+      "expected_rules": [
+        "SG-SHELL-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-07",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-07",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-08",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-08",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-09",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-09",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "shell-abuse-10",
+      "label": "malicious",
+      "path": "malicious/shell-abuse-10",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Executable pattern abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "download-exec-01",
+      "label": "malicious",
+      "path": "malicious/download-exec-01",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Remote code execution via pipe/download.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "download-exec-02",
+      "label": "malicious",
+      "path": "malicious/download-exec-02",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Remote code execution via pipe/download.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "download-exec-03",
+      "label": "malicious",
+      "path": "malicious/download-exec-03",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Remote code execution via pipe/download.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "download-exec-04",
+      "label": "malicious",
+      "path": "malicious/download-exec-04",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Remote code execution via pipe/download.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "download-exec-05",
+      "label": "malicious",
+      "path": "malicious/download-exec-05",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Remote code execution via pipe/download.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "download-exec-06",
+      "label": "malicious",
+      "path": "malicious/download-exec-06",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Remote code execution via pipe/download.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-01",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-01",
+      "expected_rules": [
+        "SG-SECRET-001",
+        "SG-NET-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-02",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-02",
+      "expected_rules": [
+        "SG-SECRET-004",
+        "SG-NET-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-03",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-03",
+      "expected_rules": [
+        "SG-SECRET-002"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-04",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-04",
+      "expected_rules": [
+        "SG-SECRET-004",
+        "SG-NET-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-05",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-05",
+      "expected_rules": [
+        "SG-SECRET-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-06",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-06",
+      "expected_rules": [
+        "SG-SECRET-003",
+        "SG-NET-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-07",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-07",
+      "expected_rules": [
+        "SG-SECRET-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "cred-exfil-08",
+      "label": "malicious",
+      "path": "malicious/cred-exfil-08",
+      "expected_rules": [
+        "SG-SECRET-001"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Credential theft / exfil patterns.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-01",
+      "label": "malicious",
+      "path": "malicious/obfuscated-01",
+      "expected_rules": [
+        "SG-OBF-001",
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Base64 + eval obfuscation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-02",
+      "label": "malicious",
+      "path": "malicious/obfuscated-02",
+      "expected_rules": [
+        "SG-OBF-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Hex escape obfuscation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-03",
+      "label": "malicious",
+      "path": "malicious/obfuscated-03",
+      "expected_rules": [
+        "SG-OBF-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "chr() concatenation obfuscation.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-04",
+      "label": "malicious",
+      "path": "malicious/obfuscated-04",
+      "expected_rules": [
+        "SG-OBF-002",
+        "SG-INST-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "Zero-width / hidden unicode.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-05",
+      "label": "malicious",
+      "path": "malicious/obfuscated-05",
+      "expected_rules": [
+        "SG-OBF-002"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "Hidden HTML comment instructions.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-06",
+      "label": "malicious",
+      "path": "malicious/obfuscated-06",
+      "expected_rules": [
+        "SG-OBF-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Opaque base64 blob.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-07",
+      "label": "malicious",
+      "path": "malicious/obfuscated-07",
+      "expected_rules": [
+        "SG-SHELL-004"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Dynamic Function constructor.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "obfuscated-08",
+      "label": "malicious",
+      "path": "malicious/obfuscated-08",
+      "expected_rules": [
+        "SG-SHELL-004",
+        "SG-AST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Dynamic import + system (AST).",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "multistage-01",
+      "label": "malicious",
+      "path": "malicious/multistage-01",
+      "expected_rules": [
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "critical",
+      "classification": "malicious",
+      "explanation": "Benign body + malicious nested script.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "multistage-02",
+      "label": "malicious",
+      "path": "malicious/multistage-02",
+      "expected_rules": [
+        "SG-INST-003",
+        "SG-NET-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Concealment plus exfil script.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "multistage-03",
+      "label": "malicious",
+      "path": "malicious/multistage-03",
+      "expected_rules": [
+        "SG-NET-001",
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Split stages across files.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "multistage-04",
+      "label": "malicious",
+      "path": "malicious/multistage-04",
+      "expected_rules": [
+        "SG-PRIV-001",
+        "SG-FS-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Privilege + destructive FS.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "multistage-05",
+      "label": "malicious",
+      "path": "malicious/multistage-05",
+      "expected_rules": [
+        "SG-DEP-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "Risky dependency install.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "multistage-06",
+      "label": "malicious",
+      "path": "malicious/multistage-06",
+      "expected_rules": [
+        "SG-DEP-002"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "Unexpected binary artifact.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "dep-risk-01",
+      "label": "malicious",
+      "path": "malicious/dep-risk-01",
+      "expected_rules": [
+        "SG-DEP-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "Global npm latest install.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "dep-risk-02",
+      "label": "malicious",
+      "path": "malicious/dep-risk-02",
+      "expected_rules": [
+        "SG-DEP-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "pip break-system-packages.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "dep-risk-03",
+      "label": "malicious",
+      "path": "malicious/dep-risk-03",
+      "expected_rules": [
+        "SG-DEP-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "curl piped to pip install.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "dep-risk-04",
+      "label": "malicious",
+      "path": "malicious/dep-risk-04",
+      "expected_rules": [
+        "SG-DEP-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "npm install from URL.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "dep-risk-05",
+      "label": "malicious",
+      "path": "malicious/dep-risk-05",
+      "expected_rules": [
+        "SG-DEP-001",
+        "SG-SHELL-003"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "postinstall download-exec.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "fp-trap-01",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-01",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-02",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-02",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-03",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-03",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-04",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-04",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-05",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-05",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-06",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-06",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-07",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-07",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-08",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-08",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-09",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-09",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "fp-trap-10",
+      "label": "fp_trap",
+      "path": "fp_trap/fp-trap-10",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Educational content that must not raise forbidden critical shell/injection rules on markdown.",
+      "static_detectable": true,
+      "max_severity_allowed": "medium"
+    },
+    {
+      "id": "mixed-01",
+      "label": "mixed",
+      "path": "mixed/mixed-01",
+      "expected_rules": [
+        "SG-SECRET-001"
+      ],
+      "expected_severity": "high",
+      "classification": "mixed",
+      "explanation": "Benign docs with one planted suspicious script line.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "mixed-02",
+      "label": "mixed",
+      "path": "mixed/mixed-02",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "mixed",
+      "explanation": "Benign docs with one planted suspicious script line.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "mixed-03",
+      "label": "mixed",
+      "path": "mixed/mixed-03",
+      "expected_rules": [
+        "SG-SECRET-001"
+      ],
+      "expected_severity": "high",
+      "classification": "mixed",
+      "explanation": "Benign docs with one planted suspicious script line.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "mixed-04",
+      "label": "mixed",
+      "path": "mixed/mixed-04",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "mixed",
+      "explanation": "Benign docs with one planted suspicious script line.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "mixed-05",
+      "label": "mixed",
+      "path": "mixed/mixed-05",
+      "expected_rules": [
+        "SG-SECRET-001"
+      ],
+      "expected_severity": "high",
+      "classification": "mixed",
+      "explanation": "Benign docs with one planted suspicious script line.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "mixed-06",
+      "label": "mixed",
+      "path": "mixed/mixed-06",
+      "expected_rules": [
+        "SG-SHELL-002"
+      ],
+      "expected_severity": "high",
+      "classification": "mixed",
+      "explanation": "Benign docs with one planted suspicious script line.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "unicode-01",
+      "label": "malicious",
+      "path": "malicious/unicode-01",
+      "expected_rules": [
+        "SG-OBF-002",
+        "SG-INST-001"
+      ],
+      "expected_severity": "medium",
+      "classification": "malicious",
+      "explanation": "Unicode bidi / zw abuse.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "unicode-02",
+      "label": "edge",
+      "path": "edge/unicode-02",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Unicode content without attack semantics.",
+      "static_detectable": true,
+      "max_severity_allowed": "low"
+    },
+    {
+      "id": "unicode-03",
+      "label": "malicious",
+      "path": "malicious/unicode-03",
+      "expected_rules": [
+        "SG-INST-001"
+      ],
+      "expected_severity": "high",
+      "classification": "malicious",
+      "explanation": "Near-paraphrase still matching regex.",
+      "static_detectable": true,
+      "max_severity_allowed": null
+    },
+    {
+      "id": "edge-encoding-01",
+      "label": "edge",
+      "path": "edge/edge-encoding-01",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Size edge without malice.",
+      "static_detectable": true,
+      "max_severity_allowed": "low"
+    },
+    {
+      "id": "edge-empty-script-01",
+      "label": "edge",
+      "path": "edge/edge-empty-script-01",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Empty script should not alone be critical.",
+      "static_detectable": true,
+      "max_severity_allowed": "low"
+    },
+    {
+      "id": "edge-malformed-meta-01",
+      "label": "edge",
+      "path": "edge/edge-malformed-meta-01",
+      "expected_rules": [],
+      "expected_severity": "informational",
+      "classification": "benign",
+      "explanation": "Structural oddities may yield STRUCT findings only.",
+      "static_detectable": true,
+      "max_severity_allowed": "high"
+    }
+  ]
+}

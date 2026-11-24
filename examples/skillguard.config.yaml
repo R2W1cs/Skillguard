@@ -1,0 +1,22 @@
+# Example SkillGuard scan configuration
+# Usage: skillguard scan ./skills --config examples/skillguard.config.yaml
+
+fail_on: high
+include_quality: true
+enable_sandbox: false
+sandbox_strict_image: false
+# For production sandbox, pin a digest and enable strict mode:
+# enable_sandbox: true
+# sandbox_strict_image: true
+# sandbox_image: "python@sha256:<64-hex-digest>"
+
+exclude_globs:
+  - "**/.git/**"
+  - "**/node_modules/**"
+  - "**/__pycache__/**"
+  - "**/.venv/**"
+  - "**/venv/**"
+  - "**/*.pyc"
+
+rules_disabled: []
+# baseline_path: .skillguard-baseline.json

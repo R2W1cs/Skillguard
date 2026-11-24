@@ -1,0 +1,6 @@
+"""python -m skillguard entry point."""
+
+from skillguard.cli import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())

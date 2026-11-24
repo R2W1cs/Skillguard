@@ -1,0 +1,55 @@
+{
+  "true_positives": 9,
+  "false_positives": 0,
+  "true_negatives": 2,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "by_category": {
+    "OBF": {
+      "tp": 1,
+      "fn": 0,
+      "fp": 0
+    },
+    "INST": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 0
+    },
+    "SECRET": {
+      "tp": 1,
+      "fn": 0,
+      "fp": 0
+    },
+    "NET": {
+      "tp": 1,
+      "fn": 0,
+      "fp": 0
+    },
+    "SHELL": {
+      "tp": 2,
+      "fn": 0,
+      "fp": 0
+    }
+  },
+  "duration_seconds": 0.0313,
+  "details": [
+    "TP obfuscated: SG-OBF-001",
+    "TP prompt-inject: SG-INST-003",
+    "TP prompt-inject: SG-INST-001",
+    "TP secret-exfil: SG-SECRET-001",
+    "TP secret-exfil: SG-INST-002",
+    "TP secret-exfil: SG-NET-002",
+    "TP shell-danger: SG-SHELL-003",
+    "TP shell-danger: SG-SHELL-001",
+    "TN hello-world: no forbidden critical rules",
+    "TN fp-docs: educational dangerous-command docs not flagged",
+    "TP mixed mixed-skill: detected mixed suspicious content"
+  ],
+  "limitations": [
+    "Corpus is synthetic and inert; it does not represent the full attack space.",
+    "Metrics measure SkillGuard rules against this fixture set only.",
+    "False-positive traps include educational documentation mentioning dangerous commands."
+  ]
+}

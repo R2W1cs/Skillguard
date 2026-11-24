@@ -1,0 +1,21 @@
+# Example pre-commit configuration for SkillGuard
+# https://pre-commit.com
+#
+# Add to your repo's .pre-commit-config.yaml, then:
+#   pre-commit install
+#   pre-commit run skillguard --all-files
+
+repos:
+  - repo: local
+    hooks:
+      - id: skillguard
+        name: SkillGuard skill security scan
+        entry: skillguard scan
+        language: system
+        files: '(^|/)SKILL\.md$'
+        pass_filenames: false
+        # Scan the repository skills root; adjust path as needed
+        args: ["skills", "--quiet", "--fail-on", "high", "--format", "terminal"]
+        # Or use the shell hook for changed-skill discovery:
+        # entry: bash
+        # args: ["integrations/pre-commit-hook.sh"]
