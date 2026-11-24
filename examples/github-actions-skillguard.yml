@@ -20,10 +20,8 @@ jobs:
           python-version: "3.12"
 
       - name: Install SkillGuard
-        run: pip install skillguard
-
-      # Optional: from this repo source
-      # run: pip install -e ".[dev]"
+        # Pin a tag/commit in production. Prefer Git until PyPI ownership is verified.
+        run: pip install "skillguard@git+https://github.com/R2W1cs/Skillguard.git@master"
 
       - name: Scan skills
         run: |

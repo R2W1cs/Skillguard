@@ -1,0 +1,2 @@
+4de87d62e13afa47ce5cd8c7c1fc498b7d784a8d47f3c819790f02b29d4bf19f  skillguard-0.3.0-py3-none-any.whl
+affdd9ac5b09dd87bca440e10a2c653cb559599f6963420a3e0df30c515426b5  skillguard-0.3.0.tar.gz

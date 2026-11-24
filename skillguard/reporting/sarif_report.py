@@ -125,7 +125,7 @@ def build_sarif(report: ScanReport) -> dict[str, Any]:
                     "driver": {
                         "name": "SkillGuard",
                         "version": __version__,
-                        "informationUri": "https://github.com/skillguard/skillguard",
+                        "informationUri": "https://github.com/R2W1cs/Skillguard",
                         "rules": sarif_rules,
                     }
                 },

@@ -40,8 +40,34 @@ jobs:
       - name: Tests with coverage
         run: pytest --cov=skillguard --cov-report=term-missing --cov-fail-under=85
 
+      - name: Docs build
+        run: mkdocs build --strict
+
       - name: Build package
         run: python -m build
+
+      - name: Inspect package metadata URLs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import tarfile, zipfile, re
+          dist = Path("dist")
+          texts = []
+          for p in dist.glob("*.tar.gz"):
+              with tarfile.open(p) as tf:
+                  for m in tf.getmembers():
+                      if m.name.endswith("PKG-INFO"):
+                          texts.append(tf.extractfile(m).read().decode())
+          for p in dist.glob("*.whl"):
+              with zipfile.ZipFile(p) as zf:
+                  for name in zf.namelist():
+                      if name.endswith("METADATA"):
+                          texts.append(zf.read(name).decode())
+          blob = "\n".join(texts)
+          assert "https://github.com/R2W1cs/Skillguard" in blob, blob[:500]
+          assert "github.com/skillguard/skillguard" not in blob
+          print("package metadata URLs OK")
+          PY
 
   audit:
     runs-on: ubuntu-latest

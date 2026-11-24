@@ -1,0 +1,21 @@
+# Release checklist — v0.3.0
+
+- [ ] On branch ready to tag (usually `master` after PR merge)
+- [ ] Version is `0.3.0` in `pyproject.toml` and `skillguard/__init__.py`
+- [ ] CHANGELOG `[0.3.0]` accurate
+- [ ] `RELEASE_NOTES_v0.3.0.md` reviewed
+- [ ] `ruff check` + `ruff format --check` pass
+- [ ] `mypy skillguard` passes
+- [ ] `pytest --cov=skillguard --cov-fail-under=85` passes
+- [ ] `pip-audit --path .` clean (or accepted exceptions documented)
+- [ ] `mkdocs build --strict` passes
+- [ ] `python -m build` produces sdist + wheel
+- [ ] `python scripts/prepare_release_assets.py` writes checksums
+- [ ] Clean venv install from wheel; `skillguard version` → `0.3.0`
+- [ ] JSON + SARIF smoke scans succeed; evidence redacted
+- [ ] Confirm no Git tag `v0.3.0` exists yet (`git tag -l 'v0.3.0'`)
+- [ ] Create annotated tag **only after** merge: `git tag -a v0.3.0 -m "SkillGuard 0.3.0"`
+- [ ] `git push origin v0.3.0`
+- [ ] GitHub Release with notes + attach `dist/*` + `release/SHA256SUMS-0.3.0.txt`
+- [ ] Optional: enable Pages; upload social preview (see `docs/GITHUB_SETUP.md`)
+- [ ] Optional: PyPI publish (only with verified package ownership)

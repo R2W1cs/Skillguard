@@ -2,7 +2,7 @@
 # Example caller:
 #   jobs:
 #     scan:
-#       uses: skillguard/skillguard/.github/workflows/skillguard-scan.yml@v0.3.0
+#       uses: R2W1cs/Skillguard/.github/workflows/skillguard-scan.yml@v0.3.0
 #       with:
 #         path: skills/
 #         fail-on: high

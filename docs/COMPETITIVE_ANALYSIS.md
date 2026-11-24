@@ -1,99 +1,52 @@
-# Competitive Analysis (verified from public docs, 2026-03-24)
+# Competitive Analysis (neutral, documentation-based)
 
-Sources inspected via public GitHub READMEs and documentation (not proprietary code):
+**Date checked:** 2026-11-24 (updated from earlier 2026-03-24 notes)  
+**Method:** Public GitHub READMEs and docs only. No proprietary code review.  
+**No superiority claim.** Unknown capabilities are marked **Not verified**.
 
-| Project | Source |
-|---------|--------|
-| NVIDIA SkillSpector | https://github.com/NVIDIA/SkillSpector |
-| Cisco AI Defense Skill Scanner | https://github.com/cisco-ai-defense/skill-scanner |
-| Snyk Agent Scan | https://github.com/snyk/agent-scan |
+| Project | Source | License (public) |
+|---------|--------|------------------|
+| SkillGuard (this project) | https://github.com/R2W1cs/Skillguard | Apache-2.0 |
+| NVIDIA SkillSpector | https://github.com/NVIDIA/SkillSpector | Apache-2.0 (per upstream README) |
+| Cisco AI Defense skill-scanner | https://github.com/cisco-ai-defense/skill-scanner | Apache-2.0 (per upstream README) |
+| Snyk Agent Scan | https://github.com/snyk/agent-scan | Apache-2.0 (per upstream README) |
 
-Claims below are limited to what public docs state. Features not documented are marked unknown.
+## Comparison matrix (verifiable dimensions)
 
----
+| Dimension | SkillGuard (R2W1cs) | NVIDIA SkillSpector | Cisco skill-scanner | Snyk agent-scan |
+|-----------|---------------------|---------------------|---------------------|-----------------|
+| Supported inputs | Local skill dir / tree with `SKILL.md` | Docs: Git URL, zip, directory, file | Docs: skill packages / layouts | Docs: discovers agents, MCP, skills |
+| Detection approach | Deterministic rules + analyzers | Rules + optional LLM semantic stage | YAML/YARA/AST/dataflow + optional LLM/cloud | Local checks + Agent Scan API |
+| Static analysis | Yes | Yes | Yes | Yes (partially local) |
+| AST analysis | Yes (Python `SG-AST-*`) | Docs mention AST / analyzers | Docs mention AST/dataflow | Not verified |
+| Cross-file analysis | Yes (`SG-XFILE-*`) | Not verified | Docs mention cross-skill overlap | Not verified |
+| Secret detection | Yes | Yes (docs) | Yes (docs) | Yes (docs; redacts before send) |
+| Prompt-injection detection | Yes (instruction rules) | Yes (docs) | Yes (docs) | Yes (docs) |
+| Sandbox / dynamic | Optional Docker; digest-pin strict mode | Docs: does not execute skill code as primary model | Optional VT/cloud/LLM; dynamic not claimed equivalent | Not verified as local sandbox |
+| CLI usability | `skillguard` Click CLI | Documented CLI | Documented CLI / API server | Documented CLI (`--ci`) |
+| CI integration | GHA reusable workflow + examples | Not verified in this pass | Pre-commit + API (docs) | CI mode (docs) |
+| Output formats | Terminal, JSON, SARIF 2.1.0 | SARIF/JSON/Markdown/terminal (docs) | SARIF/JSON/Markdown/HTML/table (docs) | JSON (docs) |
+| Benchmark transparency | Published synthetic + separate real-world; maintainer-run | Eval numbers on public benches (docs) | MaliciousSkillBench numbers (docs) | Not verified |
+| Installation | `pip install -e .` from GitHub; PyPI not verified published | See upstream | See upstream | See upstream; API terms |
+| Offline-first | Yes (core) | Partial (LLM optional; OSV optional) | Partial (cloud/VT/LLM optional) | Typically API-dependent |
+| License | Apache-2.0 | Apache-2.0 (docs) | Apache-2.0 (docs) | Apache-2.0 (docs) |
 
-## NVIDIA SkillSpector
+## SkillGuard positioning (gaps, not “wins”)
 
-**Positioning:** Broad security scanner for agent skills (Claude Code, Codex, MCP) with a LangGraph pipeline.
+Documented product gaps SkillGuard intentionally targets (without claiming uniqueness):
 
-**Verified strengths:**
-- Multi-input: Git URL, zip, directory, single file
-- Large pattern surface (docs cite many categories / analyzers)
-- Static + optional LLM semantic stage; deterministic findings retained when LLM disagrees
-- SARIF / JSON / Markdown / terminal
-- Risk score 0–100
-- Baseline / false-positive suppression (glob or fingerprint)
-- Optional OSV.dev dependency lookups with offline fallback
-- States it does not execute scanned skill code
+- Report-to-report **`skillguard compare`** regression
+- Baselines that **annotate** rather than rewrite findings
+- Reproducible **audit manifests** + signing guidance via established tools
+- Digest-pinned sandbox **fail-closed** policy
+- Offline-by-default core path
 
-**Limitations / tradeoffs (from docs):**
-- LLM stage adds cost, non-determinism, and model dependency
-- LangGraph-centric architecture is powerful but heavier for “pip install and scan offline”
-- Baseline exists; **report-to-report regression compare** is not a first-class documented CLI workflow
-- Image/sandbox digest-pinning for dynamic analysis is not a highlighted trust feature
+## What this analysis does *not* do
 
----
+- No fabricated competitor benchmark scores
+- No “best / fastest / most accurate” statements
+- No assumption that undocumented features are absent — they are **Not verified**
 
-## Cisco AI Defense Skill Scanner
-
-**Positioning:** Best-effort skill package scanner with YAML/YARA, AST/dataflow, optional LLM/meta, optional VirusTotal / Cisco cloud.
-
-**Verified strengths:**
-- Rich analyzer matrix (static, bytecode, pipeline taint, behavioral, LLM, meta)
-- Policy presets (`strict` / `balanced` / `permissive`) and custom policy YAML
-- SARIF, JSON, Markdown, HTML, table
-- Pre-commit hook and API server
-- Cross-skill overlap checks
-- Published eval numbers on MaliciousSkillBench (honest about rules-alone recall)
-
-**Limitations / tradeoffs:**
-- Optional cloud / VirusTotal / LLM reduce offline purity
-- Complexity of policy + multi-engine setup is higher for individual developers
-- Explicit “no findings ≠ safe” messaging (good honesty)
-- Reproducible **audit manifests** (file hashes + config/rule-set hashes + signing guidance) are not the primary product story
-
----
-
-## Snyk Agent Scan
-
-**Positioning:** Discovers local agents, MCP servers, and skills; analyzes via local checks + **Agent Scan API**.
-
-**Verified strengths:**
-- Broader than skills-only: MCP tool risks, agent configs, enterprise/MDM background mode
-- Named risk indicators with scores
-- CI mode (`--ci`), JSON output, risk ignore list
-- Redacts secrets before transmission (v0.6+)
-
-**Limitations / tradeoffs:**
-- **Not offline-first**: analysis depends on Snyk API / terms of use
-- Skills are one facet among MCP/agent inventory
-- Less suited as a pure “scan this skill directory with fully local, reproducible artifacts” tool
-- Custom cryptographic audit manifests / digest-pinned sandboxes are out of scope relative to SkillGuard’s trust angle
-
----
-
-## Where SkillGuard can offer genuine value (gaps)
-
-| Gap | SkillGuard 0.3.0 response |
-|-----|---------------------------|
-| Report-to-report security regression | `skillguard compare` with stable fingerprints, risk deltas, new files/scripts |
-| Suppressions that don’t fake cleanliness | Baselines that **annotate** suppressions; critical findings cannot be silently dropped |
-| Reproducible audit evidence | Audit manifests: file SHA-256, rule-set/config hashes, env, limitations |
-| Offline-by-default trust | Core scan never requires LLM or cloud APIs |
-| Sandbox image provenance | Strict mode requires digest-pinned images; fail-closed on mismatch |
-| Honest evaluation culture | Separate synthetic vs real-world metrics; competitive comparison framework without unfounded superiority claims |
-| Developer-first CI | Pre-commit + Actions focused on regression gates, not only “scan once” |
-
-## What SkillGuard should *not* chase
-
-- Matching Cisco/NVIDIA analyzer count or YARA pack size as a vanity metric
-- Making LLM judging mandatory
-- Claiming more detections without measured evidence
-- Inventing a custom signature cryptosystem
-
-## Contribution opportunities (ecosystem)
-
-- Shared inert adversarial corpora and label schemas
-- SARIF property conventions for skill-specific metadata
-- Common fingerprint formats so baselines can interoperate
-- Independent bake-offs using identical fixtures where formats allow
+For a harness that records peer availability without inventing metrics, see
+[THIRD_PARTY_COMPARISON.md](THIRD_PARTY_COMPARISON.md) and
+`skillguard benchmark compare-tools`.

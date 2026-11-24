@@ -30,14 +30,14 @@
       "tn": 0,
       "fn": 0
     },
-    "SECRET": {
-      "tp": 11,
+    "NET": {
+      "tp": 6,
       "fp": 0,
       "tn": 0,
       "fn": 0
     },
-    "NET": {
-      "tp": 6,
+    "SECRET": {
+      "tp": 11,
       "fp": 0,
       "tn": 0,
       "fn": 0
@@ -48,13 +48,13 @@
       "tn": 0,
       "fn": 0
     },
-    "PRIV": {
+    "FS": {
       "tp": 1,
       "fp": 0,
       "tn": 0,
       "fn": 0
     },
-    "FS": {
+    "PRIV": {
       "tp": 1,
       "fp": 0,
       "tn": 0,
@@ -87,7 +87,7 @@
       "fn": 0
     }
   },
-  "duration_seconds": 0.1678,
+  "duration_seconds": 0.2865,
   "details": [
     "TN benign-doc-01",
     "TN benign-doc-02",
@@ -117,8 +117,8 @@
     "TP indirect-inject-01: SG-INST-001",
     "SKIP(non-static) indirect-inject-02",
     "TP indirect-inject-03: SG-INST-001",
-    "TP indirect-inject-04: SG-OBF-002",
     "TP indirect-inject-04: SG-INST-001",
+    "TP indirect-inject-04: SG-OBF-002",
     "SKIP(non-static) indirect-inject-05",
     "SKIP(non-static) indirect-inject-06",
     "SKIP(non-static) indirect-inject-07",
@@ -149,24 +149,24 @@
     "TP download-exec-04: SG-SHELL-003",
     "TP download-exec-05: SG-SHELL-003",
     "TP download-exec-06: SG-SHELL-003",
-    "TP cred-exfil-01: SG-SECRET-001",
     "TP cred-exfil-01: SG-NET-002",
+    "TP cred-exfil-01: SG-SECRET-001",
     "TP cred-exfil-02: SG-NET-002",
     "TP cred-exfil-02: SG-SECRET-004",
     "TP cred-exfil-03: SG-SECRET-002",
     "TP cred-exfil-04: SG-NET-001",
     "TP cred-exfil-04: SG-SECRET-004",
     "TP cred-exfil-05: SG-SECRET-003",
-    "TP cred-exfil-06: SG-NET-001",
     "TP cred-exfil-06: SG-SECRET-003",
+    "TP cred-exfil-06: SG-NET-001",
     "TP cred-exfil-07: SG-SECRET-001",
     "TP cred-exfil-08: SG-SECRET-001",
     "TP obfuscated-01: SG-SHELL-002",
     "TP obfuscated-01: SG-OBF-001",
     "TP obfuscated-02: SG-OBF-001",
     "TP obfuscated-03: SG-OBF-001",
-    "TP obfuscated-04: SG-OBF-002",
     "TP obfuscated-04: SG-INST-001",
+    "TP obfuscated-04: SG-OBF-002",
     "TP obfuscated-05: SG-OBF-002",
     "TP obfuscated-06: SG-OBF-001",
     "TP obfuscated-07: SG-SHELL-004",
@@ -175,10 +175,10 @@
     "TP multistage-01: SG-SHELL-003",
     "TP multistage-02: SG-NET-002",
     "TP multistage-02: SG-INST-003",
-    "TP multistage-03: SG-NET-001",
     "TP multistage-03: SG-SHELL-002",
-    "TP multistage-04: SG-PRIV-001",
+    "TP multistage-03: SG-NET-001",
     "TP multistage-04: SG-FS-001",
+    "TP multistage-04: SG-PRIV-001",
     "TP multistage-05: SG-DEP-001",
     "TP multistage-06: SG-DEP-002",
     "TP dep-risk-01: SG-DEP-001",
@@ -203,8 +203,8 @@
     "TP mixed-04: SG-SHELL-002",
     "TP mixed-05: SG-SECRET-001",
     "TP mixed-06: SG-SHELL-002",
-    "TP unicode-01: SG-OBF-002",
     "TP unicode-01: SG-INST-001",
+    "TP unicode-01: SG-OBF-002",
     "TN unicode-02",
     "TP unicode-03: SG-INST-001",
     "TN edge-encoding-01",

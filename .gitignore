@@ -27,3 +27,9 @@ Thumbs.db
 reports/
 *.json.report
 /tmp-skillguard*
+
+# Docs site build
+/site/
+
+# Local release scratch (checksums under release/ are committed when prepared)
+benchmarks/repro-pip-freeze.txt

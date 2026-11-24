@@ -34,17 +34,21 @@ Differentiation: [docs/COMPETITIVE_ANALYSIS.md](docs/COMPETITIVE_ANALYSIS.md).
 
 ## Installation
 
-Requires Python 3.11+.
+Requires Python 3.11+. Canonical repository: **https://github.com/R2W1cs/Skillguard**.
 
 ```bash
-pip install skillguard
-# from source:
+# From source (recommended; confirm PyPI ownership before relying on pip-only installs)
+git clone https://github.com/R2W1cs/Skillguard.git
+cd Skillguard
 pip install -e ".[dev]"
-# optional sandbox extra:
+# optional sandbox / docs extras:
 pip install -e ".[sandbox]"
+pip install -e ".[docs]"
 ```
 
-Pre-commit / CI examples: [`examples/`](examples/) and [`integrations/pre-commit-hook.sh`](integrations/pre-commit-hook.sh).
+Pre-commit / CI examples: [`examples/`](examples/) and [`integrations/pre-commit-hook.sh`](integrations/pre-commit-hook.sh).  
+Docs site (MkDocs): `mkdocs serve` — see [`docs/index.md`](docs/index.md).  
+GitHub About / social preview: [`docs/GITHUB_SETUP.md`](docs/GITHUB_SETUP.md).
 
 ## Quick start
 
@@ -98,7 +102,7 @@ skillguard benchmark run --dataset adversarial --json-out benchmarks/adversarial
 skillguard benchmark run --dataset legacy --json-out benchmarks/legacy-latest.json
 ```
 
-**Measured adversarial corpus results** (SkillGuard 0.2.0, 105 labeled cases):
+**Maintainer-run synthetic adversarial results** (reproducible; not an independent audit). Snapshot from [`benchmarks/adversarial-latest.json`](benchmarks/adversarial-latest.json) (105 labeled cases):
 
 | Metric | Value |
 |--------|-------|
@@ -108,11 +112,8 @@ skillguard benchmark run --dataset legacy --json-out benchmarks/legacy-latest.js
 | False negatives | 0 |
 | Precision / Recall / F1 | 1.000 / 1.000 / 1.000 |
 | FPR / FNR | 0.000 / 0.000 |
-| Duration | ~0.17s |
 
-Snapshot: [`benchmarks/adversarial-latest.json`](benchmarks/adversarial-latest.json).
-
-> Perfect synthetic scores mean labels match heuristics on this corpus — **not** that SkillGuard is complete against novel attacks. Cases marked `static_detectable=false` are excluded from FN scoring. Real-world evaluation is separate: [docs/REAL_WORLD_EVALUATION.md](docs/REAL_WORLD_EVALUATION.md).
+> Perfect synthetic scores mean labels match heuristics on this corpus — **not** that SkillGuard is complete against novel attacks. Cases marked `static_detectable=false` are excluded from FN scoring. **Do not combine** with real-world metrics. Methodology + independent reproduction: [docs/BENCHMARK_METHODOLOGY.md](docs/BENCHMARK_METHODOLOGY.md). Real-world evaluation (separate): [docs/REAL_WORLD_EVALUATION.md](docs/REAL_WORLD_EVALUATION.md).
 
 ## GitHub Actions / pre-commit
 

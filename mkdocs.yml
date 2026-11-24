@@ -1,0 +1,96 @@
+site_name: SkillGuard
+site_description: Offline-first security scanner for AI Agent Skills
+site_url: https://r2w1cs.github.io/Skillguard/
+repo_name: R2W1cs/Skillguard
+repo_url: https://github.com/R2W1cs/Skillguard
+edit_uri: edit/master/docs/
+copyright: Apache-2.0 — SkillGuard Contributors
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/R2W1cs/Skillguard
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+      - Configuration: getting-started/configuration.md
+  - Detection:
+      - Overview: detection/overview.md
+      - Detection rules: detection-rules.md
+      - Rule limitations: DETECTION_LIMITATIONS.md
+      - General limitations: limitations.md
+  - Security:
+      - Threat model: security/threat-model.md
+      - Security model: SECURITY_MODEL.md
+      - Sandbox security: sandbox.md
+      - Responsible disclosure: security/responsible-disclosure.md
+  - Evaluation:
+      - Benchmark methodology: BENCHMARK_METHODOLOGY.md
+      - Adversarial results: evaluation/adversarial-results.md
+      - Real-world results: REAL_WORLD_EVALUATION.md
+      - Competitive analysis: COMPETITIVE_ANALYSIS.md
+      - Third-party comparison: THIRD_PARTY_COMPARISON.md
+  - Integrations:
+      - GitHub Actions: integrations/github-actions.md
+      - Pre-commit: integrations/pre-commit.md
+      - Baselines: BASELINES.md
+      - Audit manifests: AUDIT_MANIFESTS_AND_SIGNING.md
+  - Development:
+      - Contributing: development/contributing.md
+      - Architecture: development/architecture.md
+      - Testing: development/testing.md
+  - Project ops:
+      - GitHub setup: GITHUB_SETUP.md
+      - Naming audit: NAMING_AND_DISCOVERABILITY.md
+      - External submissions: EXTERNAL_SUBMISSIONS.md
+      - External security review: EXTERNAL_SECURITY_REVIEW.md
+      - Review request draft: REVIEW_REQUEST.md
+      - Visibility audit findings: VISIBILITY_AUDIT_FINDINGS.md
+      - Phase audits: PHASE_3_AUDIT.md
+  - FAQ: faq.md
+  - Submissions:
+      - awesome-agent-security: submissions/awesome-agent-security.md
+      - awesome-skills-security: submissions/awesome-skills-security.md
+
